@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+   <head>
+       <title> MCQ Test Result :</title>
+	   <link rel="stylesheet" type="text/css" href="Style.css" />
+	    <!--
+	    <script type="text/javascript" src="javaScript.js"> </script>
+	    -->
+   </head>
+	<body background="bg.jpg">
+	    <br>
+	    <h2 class="res" >Thanks for your participation.<br>
+        <u>Marks obtained by all users who had taken exam so far is:</u> </h2>
+		<table border="1" bordercolor="green" bgcolor="yellow">
+	       <tr>
+		   <td> ID_NO </td>
+		   <td> MARKS </td>
+		   </tr>   
+		   <script type="text/javascript">
+		        var len=localStorage.length;
+		        //document.write(len);
+			    //document.write("<table> <tr><td> ID </td> <td> Marks </td> </tr>");
+		        for(var i=0;i<len;i++)
+		        {
+		          document.write("<tr><td>"+localStorage.key(i)+"</td> <td>"+localStorage.getItem(localStorage.key(i))+ " </td> </tr> ");
+		        }
+			   //document.write("</table>");
+		   </script>
+	    </table>
+    <button type="submit"><a href="main.html"> Back to Exam Page </a> </button>
+    </body>
+</html>
